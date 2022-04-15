@@ -13,6 +13,7 @@ const User = require('../models/userModel');
 // Bring in jsonwebtoken
 const jwt = require('jsonwebtoken');
 
+// *-------------------------------------------------------
 // * @desc Register a new user
 // * @route /api/users
 // * access Public
@@ -62,7 +63,9 @@ const registerUser = asyncHandler(async (req, res) => {
   console.log(req.body);
   res.send('Register Route');
 });
+// *-------------------------------------------------------
 
+// *-------------------------------------------------------
 // * @desc Login a new user
 // * @route /api/users/login
 // * access Public
@@ -88,6 +91,21 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new Error('invalid credentials');
   }
 });
+// *-------------------------------------------------------
+
+// *-------------------------------------------------------
+// * @desc Get current user
+// * @route /api/users/me
+// * access Private
+const getMe = asyncHandler(async (req, res) => {
+  const user = {
+    id: req.user._id,
+    email: req.user.email,
+    name: req.user.name
+  };
+  res.status(200).json(user);
+});
+// *-------------------------------------------------------
 
 // GENERATE TOKEN
 const generateToken = (id) => {
@@ -98,5 +116,6 @@ const generateToken = (id) => {
 
 module.exports = {
   loginUser,
-  registerUser
+  registerUser,
+  getMe
 };
