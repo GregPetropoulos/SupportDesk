@@ -2,6 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import { FaSignInAlt } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+// *------------------------------------------------
+//* REDUXTK
+// useSelector-to select from global state
+// useDispatch-dispatches action--replaces mapStateToProps
+import { useSelector, useDispatch } from 'react-redux';
+
+// Actions
+import { login } from '../features/auth/authSlice';
+// *------------------------------------------------
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +20,17 @@ const Login = () => {
 
   const { email, password } = formData;
 
+  // *------------------------------------------------
+  //* REDUXTK
+  // Handle sending actions to reducer
+  const dispatch = useDispatch();
+  // useSelector passes in a function state
+  // Brings in initialState from authSlice.js
+  const { user, isLoading, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+  // *------------------------------------------------
+
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -19,6 +39,14 @@ const Login = () => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
+
+    // Created a userData object
+    const userData = {
+      email,
+      password
+    };
+    // Dispatch the login action from authSlice.js and pass in the userData object
+    dispatch(login(userData));
   };
 
   return (
