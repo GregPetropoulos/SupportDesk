@@ -3,13 +3,14 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import Spinner from '../components/Spinner';
 // *------------------------------------------------
 //* REDUXTK
 // useSelector-to select from global state
-// useDispatch-dispatches action--replaces mapStateToProps
+// useDispatch-dispatches action--replaces mapStateToProps,
 import { useSelector, useDispatch } from 'react-redux';
 
-// Actions
+// ACTIONS AND REDUCERS TO BE DISPATCHED
 import { register, reset } from '../features/auth/authSlice';
 
 // *------------------------------------------------
@@ -34,18 +35,18 @@ const Register = () => {
   );
   // *------------------------------------------------
 
-const navigate =useNavigate()
+  const navigate = useNavigate();
 
-  useEffect(()=> {
-if(isError){
-  toast.error(message)
-}
-// Redirect if successful user logged in
-if(isSuccess || user){
-  navigate('/')
-}
-dispatch(reset())
-  },[isError, isSuccess, user, message, navigate, dispatch])
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    // Redirect if successful user logged in
+    if (isSuccess || user) {
+      navigate('/');
+    }
+    dispatch(reset());
+  }, [isError, isSuccess, user, message, navigate, dispatch]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -70,6 +71,9 @@ dispatch(reset())
       dispatch(register(userData));
     }
   };
+  if(isLoading){
+    return <Spinner/>
+  }
   return (
     <>
       <section className='heading'>
