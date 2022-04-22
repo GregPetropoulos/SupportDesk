@@ -34,6 +34,7 @@ app.use(express.urlencoded({ extended: false }));
 // *-------------------------------------------------------------
 // connecting route, point to routes folder
 app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/tickets', require('./routes/ticketRoutes'));
 
 // Middleware for status codes
 app.use(errorHandler);
