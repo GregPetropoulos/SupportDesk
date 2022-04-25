@@ -13,7 +13,7 @@ const NewTicket = () => {
 
   // useSelector for ticket state
   const { isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.ticket
+    (state) => state.tickets
   );
 
   // Initialize dispatch and navigate

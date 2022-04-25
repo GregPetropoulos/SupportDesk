@@ -27,8 +27,6 @@ function App() {
             <Route path='/new-ticket' element={<PrivateRoute />}>
               <Route path='/new-ticket' element={<NewTicket />} />
             </Route>
-            {/* --------------------------------------------------- */}
-            {/* Nested private route with custom hook------------- */}
             <Route path='/tickets' element={<PrivateRoute />}>
               <Route path='/tickets' element={<Tickets />} />
             </Route>
