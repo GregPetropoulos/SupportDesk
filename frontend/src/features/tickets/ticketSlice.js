@@ -37,6 +37,36 @@ export const createTicket = createAsyncThunk(
     }
   }
 );
+// *----------------------------------------------------------------------
+
+// *----------------------------------------------------------------------
+// *GET USER TICKETS
+// AsyncThunk function takes an argument the string name and async function.
+// Inside the async function pass the user from the form and thunkAPI
+
+export const getTickets = createAsyncThunk(
+  '/tickets/getAll',
+  async (_, thunkAPI) => {
+    //used underscore to be placeholder for the first arg
+
+    try {
+      // by using the thunkAPI we can access a piece of state from anywhere. In this case we can get the user object to get the token from the authstate with the method  called getState, We are doing this to pass it to the service which will make api call to tickets--huge advantage here vs vanilla Redux
+      const token = thunkAPI.getState().auth.user.token;
+      return await ticketService.getTickets(token);
+    } catch (error) {
+      // Take message from the backend in userController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+// *----------------------------------------------------------------------
 
 //*CREATE SLICE
 export const ticketSlice = createSlice({
@@ -58,6 +88,19 @@ export const ticketSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload; //this comes from calling te back end via createTicket return thunkAPI.rejectWithValue(message);
+      })
+      .addCase(getTickets.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getTickets.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.tickets = action.payload;
+      })
+      .addCase(getTickets.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload; //this comes from calling te back end via getTickets return thunkAPI.rejectWithValue(message);
       });
   }
 });
