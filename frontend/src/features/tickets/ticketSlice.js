@@ -15,7 +15,7 @@ const initialState = {
 // *----------------------------------------------------------------------
 // *CREATE NEW TICKET
 // AsyncThunk function takes an argument the string name and async function.
-// Inside the async function pass the user from the form and thunkAPI
+// Inside the async function pass the ticketData from the form and thunkAPI
 
 export const createTicket = createAsyncThunk(
   '/tickets/create',
@@ -25,7 +25,7 @@ export const createTicket = createAsyncThunk(
       const token = thunkAPI.getState().auth.user.token;
       return await ticketService.createTicket(ticketData, token);
     } catch (error) {
-      // Take message from the backend in userController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
+      // Take message from the backend in ticketController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
       const message =
         (error.response &&
           error.response.data &&
@@ -54,7 +54,7 @@ export const getTickets = createAsyncThunk(
       const token = thunkAPI.getState().auth.user.token;
       return await ticketService.getTickets(token);
     } catch (error) {
-      // Take message from the backend in userController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
+      // Take message from the backend ticketController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
       const message =
         (error.response &&
           error.response.data &&
@@ -76,14 +76,14 @@ export const getTickets = createAsyncThunk(
 export const getTicket = createAsyncThunk(
   '/tickets/get',
   async (ticketId, thunkAPI) => {
-    //used underscore to be placeholder for the first arg
+
 
     try {
       // by using the thunkAPI we can access a piece of state from anywhere. In this case we can get the user object to get the token from the authstate with the method  called getState, We are doing this to pass it to the service which will make api call to tickets--huge advantage here vs vanilla Redux
       const token = thunkAPI.getState().auth.user.token;
       return await ticketService.getTicket(ticketId, token);
     } catch (error) {
-      // Take message from the backend in userController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
+      // Take message from the backend in ticketController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
       const message =
         (error.response &&
           error.response.data &&
@@ -105,14 +105,12 @@ export const getTicket = createAsyncThunk(
 export const closeTicket = createAsyncThunk(
   '/tickets/close',
   async (ticketId, thunkAPI) => {
-    //used underscore to be placeholder for the first arg
-
     try {
       // by using the thunkAPI we can access a piece of state from anywhere. In this case we can get the user object to get the token from the authstate with the method  called getState, We are doing this to pass it to the service which will make api call to tickets--huge advantage here vs vanilla Redux
       const token = thunkAPI.getState().auth.user.token;
       return await ticketService.closeTicket(ticketId, token);
     } catch (error) {
-      // Take message from the backend in userController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
+      // Take message from the backend in ticketController.js logic is a status code and message passed to the middleware errorMiddleware.js we want to and place it in the state message in the front end
       const message =
         (error.response &&
           error.response.data &&
