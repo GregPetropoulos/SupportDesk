@@ -19,5 +19,8 @@ router.route('/').get(protect, getTickets).post(protect, createTickets);
 //*To get an auth user's single ticket by ticket id, read, edit and delete
 router.route('/:id').get(protect, getTicket).put(protect, updateTicket).delete(protect, deleteTicket);
 
+// *RE-ROUTE INTO NOTE ROUTER
+const noteRouter = require('./noteRoutes');
+router.use('/:ticketId/notes', noteRouter);
 
 module.exports = router

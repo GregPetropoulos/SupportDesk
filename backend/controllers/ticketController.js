@@ -1,10 +1,10 @@
 // *TICKETCONTROLLER
 // Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers. Need to wrap entire function
 const asyncHandler = require('express-async-handler');
-const { off } = require('../models/userModel');
+// const { off } = require('../models/userModel');
 
 const User = require('../models/userModel');
-Ticket = require('../models/ticketModel');
+const Ticket = require('../models/ticketModel');
 
 // * @desc Get user tickets
 // * @route GET /api/tickets
