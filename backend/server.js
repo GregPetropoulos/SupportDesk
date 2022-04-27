@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
+const path =require('path')
 const PORT = process.env.PORT || 5000;
 // colors package for console.log
 const colors = require('colors');
@@ -46,7 +47,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// Middleware for status codes
+//*Middleware for status codes
 app.use(errorHandler);
 // *-------------------------------------------------------------
 
