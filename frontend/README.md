@@ -1,44 +1,99 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Support Ticket Services
 
-## Available Scripts
+## [Deployed](https://support-desk-services.herokuapp.com/)
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Intro
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table Of Contents
 
-### `npm test`
+- [INTRO](#intro)
+- [SMEAC](#smeac)
+- [TECHNOLOGIES](#technologies)
+- [LAUNCH](#launch)
+- [ILLUSTRATIONS](#illustrations)
+- [SCOPE OF FUNCTIONALITIES](#scope-of-functionalities)
+- [EXAMPLE OF USE](#example-of-use)
+- [PROJECT STATUS](#project-status)
+- [SOURCES](#sources)
+- [OTHER INFORMATION](#other-information)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## SMEAC
 
-### `npm run build`
+#### (Situation, Mission, Execute, Admin, Comm)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Situation
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Once the user encounters an issue with a product then it's the support services that will improve the users overall experience. The Support Ticket Services serves as a customer facing open line of communication and product troubleshooting. When a user needs help with product support they submit a ticket to Support Ticket Services. A users product experience will help increase revenue and improve company reputation and business relationships.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Mission
 
-### `npm run eject`
+An product issue is encountered by a user and Support Ticket Services will assist in solving any reported issue 24 hours a day. Once a ticket is submitted by a user, a staff member will attempt to solve it through product documentation and troubleshooting steps. A staff member and user can create a note on the ticket and close it if solved.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Execution
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The user must register and log into Support Ticket Services application and submit a ticket. The user will need to select product item from the dropdown box and write a detailed description of the issue. After a ticket is submitted, a user can post additional notes. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The format includes:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Problem Statement
+- Device and Version
+- Browser and Version
+- Reproduction Steps
+- Expected Outcome
+- Actual Outcome
+- Notes
+- Screenshot
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A staff member will see the list of tickets as a "new" and address the issue and create a note on the ticket as they are working through the debugging process. The steps for the staff member to solve the issue are included in this order:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Utilize Product Documentation
+- Reproduce The Issue
+- If all resources are exhausted then escalate to jira for dev work
+
+### Admin/Logistics
+
+### Command & Signal
+
+## TECHNOLOGIES
+
+Frontend
+- HTML: ReactDOM.Render will pass the Single Page Application through the root element
+- CSS: Styling HTML
+- JavaScript/JSX: Functional Programming Language across the whole application
+- React: UI Library
+- Redux ToolKit: Robust State Management
+- React Dev Tools
+
+![MERN](./src/assets/MERN-stack-1.webp)
+
+Backend
+- Nodejs: Runtime
+- Express: Backend Framework, handles endpoints
+- MongoDB: Database stores collections
+- Mongoose: ODM Object Data Mapper through Express
+- Postman: Ground truthing routes and request/response objects
+## LAUNCH
+
+## ILLUSTRATIONS
+
+## SCOPE OF FUNCTIONALITIES
+Authentication
+- Registration
+- Login
+- JSON Web Token
+A users functions include:
+- Create a ticket
+- Read a ticket
+
+## EXAMPLE OF USE
+
+## PROJECT STATUS
+
+## SOURCES
+
+## OTHER INFORMATION
