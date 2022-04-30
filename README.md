@@ -3,16 +3,17 @@
 ### [Deployed](https://support-desk-services.herokuapp.com/)
 
 
-|Enhanced/Add On| [Original Demo]()| [Enhanced Demo]() ...coming soon |
+|Enhanced/Add On| [Original Demo](https://youtu.be/OVEQdZ0eIcg)| [Enhanced Demo]() ...coming soon |
 |------------------| :-----------------: |:---------------------:|
 |Enhanced| Basic CSS        | Tailwind        |
-|Enhanced| User CRUD        | User and Admin CRUD|
+|Enhanced| User CRUD        | User/Admin UX Increased|
 |Enhanced| Auth             | Auth              |
 |Enhanced| Submission form  | Added format placeholders to form|
 |Add On  | None             | Email submission on status change|
 |Add On  | None             | Admin Dashboard|  
 |Add On  | None             |Statistics Chart|
 |Add On  | None             |FAQ|
+|Add On  | None             |Screenshot|
 
 
 ## Intro
@@ -66,13 +67,14 @@ A staff member will see the list of tickets as a "new" and address the issue and
 - If all resources are exhausted then escalate to jira for dev work
 
 ### Admin/Logistics
-The application was created on a macOS BigSur version 11.6.5, MacBook Pro 13 inch with Apple M1 chip. The project idea stemmed from a Udemy course. The browser is a Google Chrome Version 100.0.4896.127 (Official Build) (arm64)
+The application was created on a macOS BigSur version 11.6.5, MacBook Pro 13 inch with Apple M1 chip. The browser is a Google Chrome Version 100.0.4896.127 (Official Build) (arm64)
 
 In order to handle the version control a local and remote repo were used to handle commits and branches during the project.
+Supporting documentation can be found in the [sources](#sources)
 
 ## TECHNOLOGIES
 
-Frontend
+### Frontend
 - HTML: ReactDOM.Render will pass the Single Page Application through the root element
 - CSS: Styling HTML
 - JavaScript/JSX: Functional Programming Language across the whole application
@@ -82,7 +84,7 @@ Frontend
 
 ![MERN](./frontend/src/assets/MERN-stack-1.webp)
 
-Backend
+### Backend
 - Nodejs: Runtime
 - Express: Backend Framework, handles endpoints
 - MongoDB: Database stores collections
@@ -96,8 +98,10 @@ IDE
 - VSCODE with several extensions
 
 ## LAUNCH
-Support Ticket Services launched on Heroku on 4-29-2022
 [Deployed](https://support-desk-services.herokuapp.com/)
+
+Support Ticket Services launched on Heroku on 4-29-2022
+
 
 ## ILLUSTRATIONS
 
@@ -116,18 +120,29 @@ A users functions include:
 ## EXAMPLE OF USE
 
 ## PROJECT STATUS
- Deployed on to Heroku and fully functional. The project will undergo CI/CD with several improvements in the dev environmen, tested and pushed to prod via main
+ Currently live and [Deployed](https://support-desk-services.herokuapp.com/) to Heroku, fully functional.
+
+The project will undergo several CI/CD improvements and testing in the dev environment, and afterwards pushed to prod via heroku main branch
 
 ## ROADMAP
 This project will undergo several enhancements to include
  - New styling with TailwindUI
- - Added staff UI/UX Admin CRUD
+ - Added UI/UX for Admin/Users
  - Added format placeholders to create a ticket form
  - Adjusted layout
  - Email submission on status change
  - Admin Dashboard
- - Statistics Chart
+ - Statistics Chart using D3 API 
  - FAQ
+ - Admin role to include:
+    - Delete a  user
+    - Reset a password
+    - Any user ticket history
+- User role add ons:
+    - User can reset password
+    - User can delete account
+    - User history snapshot 45 days
+- Support screenshots
  - TBD
 
 ## SOURCES
@@ -144,5 +159,7 @@ This project will undergo several enhancements to include
 - [MongoDB]()
 - [Mongoose]()
 - [Postman]()
+- [Git]()
+- [Github]()
 
 ## OTHER INFORMATION
