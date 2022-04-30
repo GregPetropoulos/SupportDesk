@@ -1,11 +1,7 @@
 # Support Ticket Services
 
 ## [Deployed](https://support-desk-services.herokuapp.com/)
-
 ## Demo
-
----
-
 ## Intro
 A (MERN) React Redux Toolkit full stack application with jwt authentication, CRUD operations, protected routes, NoSQL database. Support Ticket Services is customer facing product support system to engage with technicians and solve encountered issues 
 
