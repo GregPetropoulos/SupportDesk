@@ -1,9 +1,22 @@
 # Support Ticket Services
 
-## [Deployed](https://support-desk-services.herokuapp.com/)
-## Demo
+### [Deployed](https://support-desk-services.herokuapp.com/)
+
+
+|Enhanced/Add On| [Original Demo]()| [Enhanced Demo]() ...coming soon |
+|------------------| :-----------------: |:---------------------:|
+|Enhanced| Basic CSS        | Tailwind        |
+|Enhanced| User CRUD        | User and Admin CRUD|
+|Enhanced| Auth             | Auth              |
+|Enhanced| Submission form  | Added format placeholders to form|
+|Add On  | None             | Email submission on status change|
+|Add On  | None             | Admin Dashboard|  
+|Add On  | None             |Statistics Chart|
+|Add On  | None             |FAQ|
+
+
 ## Intro
-A (MERN) React Redux Toolkit full stack application with jwt authentication, CRUD operations, protected routes, NoSQL database. Support Ticket Services is customer facing product support system to engage with technicians and solve encountered issues 
+A (MERN) React Redux Toolkit full stack application with jwt authentication, CRUD operations, protected routes, and NoSQL database. Support Ticket Services application is a customer facing product support system to engage with technicians and solve encountered issues 
 
 ## Table of Contents
 
@@ -67,7 +80,7 @@ Frontend
 - Redux ToolKit: Robust State Management
 - React Dev Tools
 
-![MERN](./src/assets/MERN-stack-1.webp)
+![MERN](./frontend/src/assets/MERN-stack-1.webp)
 
 Backend
 - Nodejs: Runtime
@@ -108,7 +121,13 @@ A users functions include:
 ## ROADMAP
 This project will undergo several enhancements to include
  - New styling with TailwindUI
- - Added staff UI/UX
+ - Added staff UI/UX Admin CRUD
+ - Added format placeholders to create a ticket form
+ - Adjusted layout
+ - Email submission on status change
+ - Admin Dashboard
+ - Statistics Chart
+ - FAQ
  - TBD
 
 ## SOURCES
