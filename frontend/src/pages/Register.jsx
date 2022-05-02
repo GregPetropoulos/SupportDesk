@@ -76,19 +76,21 @@ const Register = () => {
   }
   return (
     <>
-      <section className='heading'>
-        <h1>
-          <FaUser />
+      <section className=' sm:text-2xl text-center m-3'>
+        <h1 className='flex justify-center items-center font-bold space '>
+          <FaUser className='mr-3'/>
           Register
         </h1>
         <p> Please create an account</p>
       </section>
-      <section className='form'>
-        <form onSubmit={onSubmit}>
-          <div className='form-group'>
+      <section className='form items-center'>
+        <form onSubmit={onSubmit} className=' flex-col items-center justify-center space-y-6 '>
+          <div className='form-control'>
+          <label className='block-inline justify-center input-group sm:flex sm:flex-wrap sm:justify-center  '>
+              <span>Name</span>
             <input
               type='text'
-              className='form-control'
+              className=' input input-bordered input-sm sm:input-md '
               id='name'
               name='name'
               value={name}
@@ -96,11 +98,14 @@ const Register = () => {
               placeholder='Enter your name'
               required
             />
+            </label>
           </div>
-          <div className='form-group'>
+          <div className='form-control'>
+          <label className='block-inline justify-center input-group sm:flex sm:flex-wrap sm:justify-center '>
+              <span>Email</span>
             <input
               type='email'
-              className='form-control'
+              className='input input-bordered input-sm sm:input-md  '
               id='email'
               name='email'
               value={email}
@@ -108,11 +113,14 @@ const Register = () => {
               placeholder='Enter your email'
               required
             />
+            </label>
           </div>
-          <div className='form-group'>
+          <div className='form-control'>
+          <label className='block-inline justify-center input-group sm:flex sm:flex-wrap sm:justify-center '>
+              <span>Password</span>
             <input
               type='password'
-              className='form-control'
+              className='input input-bordered input-sm sm:input-md  mr-7 '
               id='password'
               name='password'
               value={password}
@@ -120,11 +128,14 @@ const Register = () => {
               placeholder='Enter your password'
               required
             />
+            </label>
           </div>
-          <div className='form-group'>
+          <div className='form-control'>
+          <label className='block-inline input-group justify-center sm:flex sm:flex-wrap sm:justify-center '>
+              <span>Password2</span>
             <input
               type='password'
-              className='form-control'
+              className='input input-bordered input-sm sm:input-md  mr-9 '
               id='password2'
               name='password2'
               value={password2}
@@ -132,6 +143,7 @@ const Register = () => {
               placeholder='Confirm your password'
               required
             />
+            </label>
           </div>
           <div className='form-group'>
             <button className='btn btn-block'>Submit</button>
