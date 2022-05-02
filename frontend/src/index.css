@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,400;1,500;1,600;1,700&display=swap');
 
-* {
+
+/* The base has box-sizing: border-box; as default  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  @done
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ @done
 body {
   font-family: 'Poppins', sans-serif;
+  font-family: 'Cabin', sans-serif;
   height: 100vh;
 }
 
@@ -34,7 +42,7 @@ h3 {
   font-weight: 600;
   margin-bottom: 10px;
 }
-
+@done
 .container {
   width: 100%;
   max-width: 960px;
@@ -43,6 +51,7 @@ h3 {
   text-align: center;
 }
 
+@done
 .header {
   display: flex;
   justify-content: space-between;
@@ -402,5 +411,5 @@ footer {
 
   .heading p {
     font-size: 1.5rem;
-  }
-}
+  } */
+/* } */

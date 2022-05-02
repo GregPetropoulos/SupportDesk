@@ -69,42 +69,47 @@ const Login = () => {
   }
   return (
     <>
-      <section className='heading'>
-        <h1>
-          <FaSignInAlt />
-          Login
+      <section className=' text-2xl text-center m-3'>
+        <h1 className='flex justify-center items-center font-bold space '>
+          <FaSignInAlt className='mr-3' /> Login
         </h1>
         <p> Please login to request support</p>
       </section>
-      <section className='form'>
-        <form onSubmit={onSubmit}>
-          <div className='form-group'>
-            <input
-              type='email'
-              className='form-control'
-              id='email'
-              name='email'
-              value={email}
-              onChange={onChange}
-              placeholder='Enter your email'
-              required
-            />
+      <section className='form items-center '>
+        <form onSubmit={onSubmit} className=' flex-col items-center justify-center space-y-6 '>
+          <div className='form-control'>
+            <label className='input-group flex flex-wrap justify-center input-group-sm '>
+              <span>Email</span>
+              <input
+                type='email'
+                className='input input-bordered input-sm '
+                id='email'
+                name='email'
+                value={email}
+                onChange={onChange}
+                placeholder='Enter your email'
+                required
+              />
+            </label>
           </div>
-          <div className='form-group'>
-            <input
-              type='password'
-              className='form-control'
-              id='password'
-              name='password'
-              value={password}
-              onChange={onChange}
-              placeholder='Enter your password'
-              required
-            />
+          <div className='form-control items-center'>
+            <label className='input-group flex flex-wrap justify-center input-group-sm '>
+              <span>Password</span>
+              <input
+                type='password'
+                className='input input-bordered input-sm'
+                id='password'
+                name='password'
+                value={password}
+                onChange={onChange}
+                placeholder='Enter your password'
+                required
+              />
+            </label>
           </div>
 
-          <div className='form-group'>
-            <button className='btn btn-block'>Submit</button>
+          <div className='form-control'>
+            <button className='btn btn-secondary btn-block'>Submit</button>
           </div>
         </form>
       </section>

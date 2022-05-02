@@ -1,6 +1,6 @@
 // Author: Greg Petropoulos
 // 4.29.22
-// Support Ticket Services 
+// Support Ticket Services
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className='container'>
+        <div className='container mx-auto text-center'>
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />

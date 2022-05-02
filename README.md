@@ -2,22 +2,21 @@
 
 ### [Deployed](https://support-desk-services.herokuapp.com/)
 
-
-|Enhanced/Add On| [Original Demo](https://youtu.be/OVEQdZ0eIcg)| [Enhanced Demo]() ...coming soon |
-|------------------| :-----------------: |:---------------------:|
-|Enhanced| Basic CSS        | Tailwind        |
-|Enhanced| User CRUD        | User/Admin UX Increased|
-|Enhanced| Auth             | Auth              |
-|Enhanced| Submission form  | Added format placeholders to form|
-|Add On  | None             | Email submission on status change|
-|Add On  | None             | Admin Dashboard|  
-|Add On  | None             |Statistics Chart|
-|Add On  | None             |FAQ|
-|Add On  | None             |Screenshot|
-
+| Enhanced/Add On | [Original Demo](https://youtu.be/OVEQdZ0eIcg) |                             [Enhanced Demo]() ...coming soon                              |
+| --------------- | :-------------------------------------------: | :---------------------------------------------------------------------------------------: |
+| Enhanced        |                   Basic CSS                   | [TailwindUI](https://tailwindcss.com/docs/installation) & [daisyUI](https://daisyui.com/) |
+| Enhanced        |                   User CRUD                   |                                  User/Admin UX Increased                                  |
+| Enhanced        |                     Auth                      |                                           Auth                                            |
+| Enhanced        |                Submission form                |                             Added format placeholders to form                             |
+| Add On          |                     None                      |                             Email submission on status change                             |
+| Add On          |                     None                      |                                      Admin Dashboard                                      |
+| Add On          |                     None                      |                                     Statistics Chart                                      |
+| Add On          |                     None                      |                                            FAQ                                            |
+| Add On          |                     None                      |                                        Screenshot                                         |
 
 ## Intro
-A (MERN) React Redux Toolkit full stack application with jwt authentication, CRUD operations, protected routes, and NoSQL database. Support Ticket Services application is a customer facing product support system to engage with technicians and solve encountered issues 
+
+A (MERN) React Redux Toolkit full stack application with jwt authentication, CRUD operations, protected routes, and NoSQL database. Support Ticket Services application is a customer facing product support system to engage with technicians and solve encountered issues
 
 ## Table of Contents
 
@@ -46,7 +45,7 @@ Support Ticket Services role is to solve and report issues within 24 hours, when
 
 ### Execution
 
-The user must register and log into Support Ticket Services application and submit a ticket. The user will need to select product item from the dropdown box and write a detailed description of the issue. After a ticket is submitted, a user can post additional notes. 
+The user must register and log into Support Ticket Services application and submit a ticket. The user will need to select product item from the dropdown box and write a detailed description of the issue. After a ticket is submitted, a user can post additional notes.
 
 The format includes:
 
@@ -59,7 +58,6 @@ The format includes:
 - Notes
 - Screenshot
 
-
 A staff member will see the list of tickets as a "new" and address the issue and create a note on the ticket as they are working through the debugging process. The steps for the staff member to solve the issue are included in this order:
 
 - Utilize Product Documentation
@@ -67,6 +65,7 @@ A staff member will see the list of tickets as a "new" and address the issue and
 - If all resources are exhausted then escalate to jira for dev work
 
 ### Admin/Logistics
+
 The application was created on a macOS BigSur version 11.6.5, MacBook Pro 13 inch with Apple M1 chip. The browser is a Google Chrome Version 100.0.4896.127 (Official Build) (arm64)
 
 In order to handle the version control a local and remote repo were used to handle commits and branches during the project.
@@ -75,6 +74,7 @@ Supporting documentation can be found in the [sources](#sources)
 ## TECHNOLOGIES
 
 ### Frontend
+
 - HTML: ReactDOM.Render will pass the Single Page Application through the root element
 - CSS: Styling HTML
 - JavaScript/JSX: Functional Programming Language across the whole application
@@ -85,6 +85,7 @@ Supporting documentation can be found in the [sources](#sources)
 ![MERN](./frontend/src/assets/MERN-stack-1.webp)
 
 ### Backend
+
 - Nodejs: Runtime
 - Express: Backend Framework, handles endpoints
 - MongoDB: Database stores collections
@@ -92,25 +93,28 @@ Supporting documentation can be found in the [sources](#sources)
 - Postman: Ground truthing routes and request/response objects
 
 Version Control
+
 - Git
 - Github Repo for the remote repository
-IDE
+  IDE
 - VSCODE with several extensions
 
 ## LAUNCH
+
 [Deployed](https://support-desk-services.herokuapp.com/)
 
 Support Ticket Services launched on Heroku on 4-29-2022
 
-
 ## ILLUSTRATIONS
 
 ## SCOPE OF FUNCTIONALITIES
+
 Authentication
+
 - Registration
 - Login
 - JSON Web Token
-A users functions include:
+  A users functions include:
 - Create a ticket
 - View a ticket
 - Create a note
@@ -120,32 +124,36 @@ A users functions include:
 ## EXAMPLE OF USE
 
 ## PROJECT STATUS
- Currently live and [Deployed](https://support-desk-services.herokuapp.com/) to Heroku, fully functional.
+
+Currently live and [Deployed](https://support-desk-services.herokuapp.com/) to Heroku, fully functional.
 
 The project will undergo several CI/CD improvements and testing in the dev environment, and afterwards pushed to prod via heroku main branch
 
 ## ROADMAP
+
 This project will undergo several enhancements to include
- - New styling with TailwindUI
- - Added UI/UX for Admin/Users
- - Added format placeholders to create a ticket form
- - Adjusted layout
- - Email submission on status change
- - Admin Dashboard
- - Statistics Chart using D3 API 
- - FAQ
- - Admin role to include:
-    - Delete a  user
-    - Reset a password
-    - Any user ticket history
+
+- New styling with TailwindUI
+- Added UI/UX for Admin/Users
+- Added format placeholders to create a ticket form
+- Adjusted layout
+- Email submission on status change
+- Admin Dashboard
+- Statistics Chart using D3 API
+- FAQ
+- Admin role to include:
+  - Delete a user
+  - Reset a password
+  - Any user ticket history
 - User role add ons:
-    - User can reset password
-    - User can delete account
-    - User history snapshot 45 days
+  - User can reset password
+  - User can delete account
+  - User history snapshot 45 days
 - Support screenshots
- - TBD
+- TBD
 
 ## SOURCES
+
 - [MDN]()
 - [JSON Web Token]()
 - [HTML]()
@@ -161,5 +169,7 @@ This project will undergo several enhancements to include
 - [Postman]()
 - [Git]()
 - [Github]()
+- [TailwindUI](https://tailwindcss.com/docs/installation)
+- [daisyUI](https://daisyui.com/)
 
 ## OTHER INFORMATION
