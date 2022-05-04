@@ -106,20 +106,25 @@ Version Control
 Support Ticket Services launched on Heroku on 4-29-2022
 
 ## ILLUSTRATIONS
+JSON Web Token
+- Once the token is hashed and salted I verified it on [JSON Web Token](https://jwt.io/)
+![JWT](./frontend/src/assets/jwt.png)
+- Next to confirm the correct user `id` was encrypted in the token, a cross check in the [MongoDB](https://www.mongodb.com/) `user` collection matched
+![User](./frontend/src/assets/db.png)
 
 ## SCOPE OF FUNCTIONALITIES
 
-Authentication
+### Authentication
 
 - Registration
 - Login
 - JSON Web Token
-  A users functions include:
+### A users functions include:
 - Create a ticket
 - View a ticket
 - Create a note
 - View a note
-- An admin user will have future enhancements implemented see [Roadmap](#roadmap)
+### An admin user will have future enhancements implemented see [Roadmap](#roadmap)
 
 ## EXAMPLE OF USE
 
@@ -155,7 +160,7 @@ This project will undergo several enhancements to include
 ## SOURCES
 
 - [MDN]()
-- [JSON Web Token]()
+- [JSON Web Token](https://jwt.io/)
 - [HTML]()
 - [CSS]()
 - [JavaScript]()
@@ -164,7 +169,7 @@ This project will undergo several enhancements to include
 - [Redux]()
 - [Nodejs]()
 - [Express]()
-- [MongoDB]()
+- [MongoDB](https://www.mongodb.com/)
 - [Mongoose]()
 - [Postman]()
 - [Git]()

@@ -71,78 +71,88 @@ const Register = () => {
       dispatch(register(userData));
     }
   };
-  if(isLoading){
-    return <Spinner/>
+  if (isLoading) {
+    return <Spinner />;
   }
   return (
     <>
       <section className=' sm:text-2xl text-center m-3'>
         <h1 className='flex justify-center items-center font-bold space '>
-          <FaUser className='mr-3'/>
+          <FaUser className='mr-3' />
           Register
         </h1>
         <p> Please create an account</p>
       </section>
       <section className='form items-center'>
-        <form onSubmit={onSubmit} className=' flex-col items-center justify-center space-y-6 '>
+        <form
+          onSubmit={onSubmit}
+          className=' flex-col items-center justify-center space-y-6 '>
           <div className='form-control'>
-          <label className='block-inline justify-center input-group sm:flex sm:flex-wrap sm:justify-center  '>
+            <label
+              htmlFor='name'
+              className='input-group input-group-vertical sm:input-group sm:input sm:flex sm:flex-wrap sm:justify-center input-group-sm  '>
               <span>Name</span>
-            <input
-              type='text'
-              className=' input input-bordered input-sm sm:input-md '
-              id='name'
-              name='name'
-              value={name}
-              onChange={onChange}
-              placeholder='Enter your name'
-              required
-            />
+              <input
+                type='text'
+                className=' input input-bordered input-sm '
+                id='name'
+                name='name'
+                value={name}
+                onChange={onChange}
+                placeholder='Enter your name'
+                required
+              />
             </label>
           </div>
           <div className='form-control'>
-          <label className='block-inline justify-center input-group sm:flex sm:flex-wrap sm:justify-center '>
+            <label
+              htmlFor='email'
+              className='input-group input-group-vertical sm:input-group sm:input sm:flex sm:flex-wrap sm:justify-center input-group-sm '>
               <span>Email</span>
-            <input
-              type='email'
-              className='input input-bordered input-sm sm:input-md  '
-              id='email'
-              name='email'
-              value={email}
-              onChange={onChange}
-              placeholder='Enter your email'
-              required
-            />
+              <input
+                type='email'
+                className='input input-bordered input-sm '
+                id='email'
+                name='email'
+                value={email}
+                onChange={onChange}
+                placeholder='Enter your email'
+                required
+              />
             </label>
           </div>
           <div className='form-control'>
-          <label className='block-inline justify-center input-group sm:flex sm:flex-wrap sm:justify-center '>
+            <label
+              htmlFor='password'
+              className='input-group input-group-vertical sm:input-group sm:input sm:flex sm:flex-wrap sm:justify-center input-group-sm '>
               <span>Password</span>
-            <input
-              type='password'
-              className='input input-bordered input-sm sm:input-md  mr-7 '
-              id='password'
-              name='password'
-              value={password}
-              onChange={onChange}
-              placeholder='Enter your password'
-              required
-            />
+              <input
+                type='password'
+                className='input input-bordered input-sm  '
+                id='password'
+                name='password'
+                value={password}
+                onChange={onChange}
+                placeholder='Enter your password'
+                required
+              />
             </label>
           </div>
           <div className='form-control'>
-          <label className='block-inline input-group justify-center sm:flex sm:flex-wrap sm:justify-center '>
+            <label
+              htmlFor='password2'
+              className='input-group input-group-vertical sm:input-group sm:input sm:flex sm:flex-wrap sm:justify-center input-group-sm  '>
               <span>Password2</span>
-            <input
-              type='password'
-              className='input input-bordered input-sm sm:input-md  mr-9 '
-              id='password2'
-              name='password2'
-              value={password2}
-              onChange={onChange}
-              placeholder='Confirm your password'
-              required
-            />
+              <input
+                type='password'
+                className='input input-bordered input-sm '
+                id='password2'
+                name='password2'
+                value={password2}
+                onChange={onChange}
+                placeholder='Confirm your password'
+                required
+              />
             </label>
           </div>
           <div className='form-group'>

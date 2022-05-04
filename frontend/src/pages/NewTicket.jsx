@@ -6,7 +6,6 @@ import { createTicket, reset } from '../features/tickets/ticketSlice';
 import Spinner from '../components/Spinner';
 import BackButton from '../components/BackButton';
 
-
 const NewTicket = () => {
   // useSelector for auth state
   const { user } = useSelector((state) => state.auth);
@@ -49,46 +48,77 @@ const NewTicket = () => {
   }
   return (
     <>
-    <BackButton url='/'/>
-      <section className='heading'>
-        <h1>Create New Ticket</h1>
-        <p>Please fill out form below</p>
+      <div className='flex'>
+        <BackButton url='/' />
+      </div>
+      <section className='flex-col items-center justify-center text-center mb-5'>
+        <h1 className=' sm:text-2xl font-bold'>Create New Ticket</h1>
+        <p className='text-sm'>Please fill out form below</p>
       </section>
-      <section className='form'>
-        <div className='form-group'>
-          <label htmlFor='name'>Customer Name</label>
-          <input type='text' className='form-control' value={name} disabled />
+
+      <section className='flex-row items-center justify-between my-2'>
+        <div className='form-control items-center space-y-6 w-full'>
+          <label
+            htmlFor='name'
+            className='input-group input-group-vertical w-auto sm:w-1/2 sm:input-group-lg'>
+            <span className=''>Customer Name</span>
+            <input
+              type='text'
+              className='input input-bordered sm:input-lg'
+              value={name}
+              disabled
+            />
+          </label>
+          <label
+            htmlFor='email'
+            className='input-group input-group-vertical w-auto sm:w-1/2 sm:input-group-lg'>
+            <span>Customer Email</span>
+            <input
+              type='text'
+              className='input input-bordered  sm:input-lg'
+              value={email}
+              disabled
+            />
+          </label>
         </div>
 
-        <div className='form-group'>
-          <label htmlFor='email'>Customer Email</label>
-          <input type='text' className='form-control' value={email} disabled />
-        </div>
-        <form onSubmit={onSubmit}>
-          <div className='form-group'>
-            <label htmlFor='product'>Product</label>
+        {/* FORM */}
+        <form
+          onSubmit={onSubmit}
+          className='flex-col items-center justify-center space-y-6 w-full mt-4 '>
+          <div className='form-control items-center'>
+            <label
+              htmlFor='product'
+              className='input-group input-group-vertical'>
+              Product
+            </label>
             <select
+              className='select select-primary select-bordered text-accent  max-w-xs sm:w-full mt-4'
               name='product'
               id='product'
               value={product}
               onChange={(e) => setProduct(e.target.value)}>
+              <option disable>Pick a device</option>
               <option value='iPhone'>iPhone</option>
               <option value='Macbook Pro'>Macbook Pro</option>
               <option value='iMac'>iMac</option>
               <option value='iPad'>iPad</option>
             </select>
           </div>
-          <div className='form-group'>
-            <label htmlFor='description'>Description of the issue</label>
+          <div className='form-control items-center'>
+            <label htmlFor='description' className='label-text mb-3'>
+              Description of the issue
+            </label>
             <textarea
               name='description'
               id='description'
-              className='form-control'
+              className='textarea textarea-primary textarea-bordered h-24 text-accent placeholder-accent w-1/2'
               value={description}
+              placeholder='Problem Statement, Device, Browser Version, etc '
               onChange={(e) => setDescription(e.target.value)}></textarea>
           </div>
-          <div className='form-group'>
-            <button className='btn btn-block'>Submit</button>
+          <div className='form-control items-center '>
+            <button className='btn btn-block-inline w-1/2'>Submit</button>
           </div>
         </form>
       </section>

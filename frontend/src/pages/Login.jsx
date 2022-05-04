@@ -76,9 +76,13 @@ const Login = () => {
         <p> Please login to request support</p>
       </section>
       <section className='form items-center '>
-        <form onSubmit={onSubmit} className=' flex-col items-center justify-center space-y-6 '>
+        <form
+          onSubmit={onSubmit}
+          className=' flex-col items-center justify-center space-y-6 '>
           <div className='form-control'>
-            <label className='input-group flex flex-wrap justify-center input-group-sm '>
+            <label
+              htmlFor='email'
+              className='input-group input-group-vertical sm:input-group sm:input sm:flex sm:flex-wrap sm:justify-center input-group-sm '>
               <span>Email</span>
               <input
                 type='email'
@@ -93,7 +97,9 @@ const Login = () => {
             </label>
           </div>
           <div className='form-control items-center'>
-            <label className='input-group flex flex-wrap justify-center input-group-sm '>
+            <label
+              htmlFor='password'
+              className='input-group input-group-vertical sm:input-group sm:input sm:flex sm:flex-wrap sm:justify-center input-group-sm  '>
               <span>Password</span>
               <input
                 type='password'
