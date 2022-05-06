@@ -24,8 +24,12 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    width:'300px',
+    height:'200px',
+    background:'#58C7F3'
   }
+  // *STOPPED HERE-----------------------------
 };
 // Reaches into the index.html and mounts onto the root
 Modal.setAppElement('#root');
@@ -90,61 +94,88 @@ const Ticket = () => {
   }
 
   return (
-    <div className='ticket-page'>
-      <header className='ticket-header'>
+    <div className='flex flex-col w-full space-y-6'>
+      <header className='flex  '>
         <BackButton url='/tickets' />
-        <h2>
-          Ticket ID: {ticket._id}
-          <span className={`status status-${ticket.status}`}>
-            {ticket.status}
-          </span>
-        </h2>
-        <h3>
-          Date Submitted: {new Date(ticket.createdAt).toLocaleString('en-US')}
-        </h3>
-        <h3>Product: {ticket.product}</h3>
-        <hr />
-        <div className='ticket-desc'>
-          <h3>Description of Issue</h3>
+      </header>
+      {/* Card1*/}
+      <div className=' card shadow-xl bg-neutral text-neutral-content sm:w-1/2 md:w-1/3 '>
+        <div className='flex card-body md:text-left'>
+          <h2 className='w-full justify-center card-title sm:justify-end '>
+            <span className={`  p-px status status-${ticket.status} sm:status`}>
+              {ticket.status}
+            </span>
+          </h2>
+          <p className='justify-center break-words '>
+            <span className='font-bold'>Ticket ID</span> : {ticket._id}
+          </p>
+          <p className=''>
+            <span className='font-bold'>Submission Date</span>{' '}
+            {new Date(ticket.createdAt).toLocaleString('en-US')}
+          </p>
+          <div className='card-actions justify-center sm:justify-end'>
+            {ticket.status !== 'closed' && (
+              <button
+                className='btn btn-accent btn-sm sm:btn-md'
+                onClick={openModal}>
+                <FaPlus className='mr-3' /> Add Note
+              </button>
+            )}
+            {ticket.status !== 'closed' && (
+              <button
+                className='btn btn-error btn-sm sm:btn-md'
+                onClick={onTicketClose}>
+                Close Ticket
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+      {/* Need to fix this 2nd card at 275px right side is off some how */}
+      <hr></hr>
+      {/* Card2 */}
+      <div className=' card bg-neutral w-full text-neutral-content '>
+        <div className='flex card-body items-center text-center'>
+          <h3 className='card-title'>Description of Issue</h3>
           <p>{ticket.description}</p>
         </div>
-        <h2>Notes</h2>
-      </header>
-      {ticket.status !== 'closed' && (
-        <button className='btn' onClick={openModal}>
-          <FaPlus /> Add Note
-        </button>
-      )}
+        <h3 className='font-bold bg-accent text-base-200'>Notes</h3>
+        {notes.map((note) => (
+          <NoteItem key={note._id} note={note} />
+        ))}
+      </div>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel='Add Note'>
-        <h2>Add Note</h2>
-        <button className='btn-close' onClick={closeModal}>
-          X
-        </button>
-        <form onSubmit={onNoteSubmit}>
-          <div className='form-group'>
+        contentLabel='Add Note'
+          >
+        <div className='flex justify-end '>
+          <button
+            className='btn btn-xs btn-error btn-close '
+            onClick={closeModal}>
+            X
+          </button>
+        </div>
+        <h2 className='font-bold text-neutral'>Add Note</h2>
+
+        <form
+          onSubmit={onNoteSubmit}
+          className=' h-200px w-200px space-y-3 '>
+          <div className='form-control'>
             <textarea
               name='noteText'
               id='noteText'
-              className='form-control'
+              className='textarea placeholder-primary'
               placeholder='Note text'
               value={noteText}
               onChange={(e) => setNoteText(e.target.value)}></textarea>
           </div>
-          <button type='submit'>Submit</button>
+          <button type='submit' className='btn btn-sm btn-accent'>
+            Submit
+          </button>
         </form>
       </Modal>
-      {notes.map((note) => (
-        <NoteItem key={note._id} note={note} />
-      ))}
-      {ticket.status !== 'closed' && (
-        <button className='btn btn-danger btn-block' onClick={onTicketClose}>
-          Close Ticket
-        </button>
-      )}
     </div>
   );
 };

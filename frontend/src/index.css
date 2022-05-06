@@ -1,10 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,400;1,500;1,600;1,700&display=swap');
 
-
 /* The base has box-sizing: border-box; as default  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .status {
+    @apply bg-secondary w-24 pt-5 pb-5 justify-self-center rounded-xl text-base-100 text-center;
+  }
+  .status-new {
+    @apply bg-accent rounded-xl;
+  }
+  .status-open {
+    @apply bg-secondary-content rounded-xl;
+  }
+  .status-closed{
+    @apply bg-error rounded-xl
+  }
+}
+
+/* .status-new {
+  background-color: green;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.status-open {
+  background-color: steelblue;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.status-closed {
+  background-color: darkred;
+  color: #fff;
+  border-radius: 10px;
+} */
 
 /* * {
   @done
