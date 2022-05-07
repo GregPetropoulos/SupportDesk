@@ -25,9 +25,9 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width:'300px',
-    height:'200px',
-    background:'#58C7F3'
+    width: '300px',
+    height: '200px',
+    background: '#58C7F3'
   }
   // *STOPPED HERE-----------------------------
 };
@@ -148,8 +148,7 @@ const Ticket = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel='Add Note'
-          >
+        contentLabel='Add Note'>
         <div className='flex justify-end '>
           <button
             className='btn btn-xs btn-error btn-close '
@@ -159,9 +158,7 @@ const Ticket = () => {
         </div>
         <h2 className='font-bold text-neutral'>Add Note</h2>
 
-        <form
-          onSubmit={onNoteSubmit}
-          className=' h-200px w-200px space-y-3 '>
+        <form onSubmit={onNoteSubmit} className=' h-200px w-200px space-y-3 '>
           <div className='form-control'>
             <textarea
               name='noteText'
