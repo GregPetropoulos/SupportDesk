@@ -123,14 +123,14 @@ const Ticket = () => {
           <div className='card-actions justify-center sm:justify-end'>
             {ticket.status !== 'closed' && (
               <button
-                className='btn btn-accent btn-sm sm:btn-md'
+                className='btn btn-accent btn-sm hover:scale-125 sm:btn-md'
                 onClick={openModal}>
-                <FaPlus className='mr-3' /> Add Note
+                <FaPlus className='mr-3 ' /> Add Note
               </button>
             )}
             {ticket.status !== 'closed' && (
               <button
-                className='btn btn-error btn-sm sm:btn-md'
+                className='btn btn-error btn-sm hover:scale-125 sm:btn-md'
                 onClick={onTicketClose}>
                 Close Ticket
               </button>

@@ -10,13 +10,13 @@
     @apply bg-secondary w-24 pt-5 pb-5 justify-self-center rounded-xl text-base-100 text-center;
   } */
   .status-new {
-    @apply bg-success w-20 pb-1 rounded-xl justify-self-center text-base-100 text-center;
+    @apply bg-success w-20 pb-1 mt-3 rounded-xl justify-self-center text-base-100 text-center;
   }
   .status-open {
-    @apply  bg-accent w-20 pb-1 rounded-xl justify-self-center text-base-100 text-center;
+    @apply bg-accent w-20 pb-1 mt-3 rounded-xl justify-self-center text-base-100 text-center;
   }
-  .status-closed{
-    @apply  bg-error w-20 pb-1 rounded-xl justify-self-center text-base-100 text-center; 
+  .status-closed {
+    @apply bg-error w-20 pb-1 mt-3 rounded-xl justify-self-center text-base-100 text-center;
   }
 }
 

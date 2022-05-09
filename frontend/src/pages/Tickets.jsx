@@ -40,7 +40,7 @@ const Tickets = () => {
         Tickets
       </h1>
       <div className='w-screen bg-base-150 sm:text-md sm:w-full md:text-md'>
-        <div className='grid grid-cols-3 justify-around items-center bg-secondary rounded text-center text-sm font-bold my-2 w-screen  sm:text-2xl sm:w-full md:text-3xl'>
+        <div className='grid grid-cols-3 justify-around items-center bg-secondary rounded text-center text-sm font-bold my-2 mb-8 w-screen  sm:text-2xl sm:w-full md:text-3xl'>
           <div className='md:text-left md:pl-14'>Date</div>
           <div>Product</div>
           <div>Status</div>

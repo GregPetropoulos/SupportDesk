@@ -114,6 +114,9 @@ JSON Web Token
 
 ## SCOPE OF FUNCTIONALITIES
 
+## Features
+- Authentication
+-  ...
 ### Authentication
 
 - Registration
@@ -138,7 +141,7 @@ The project will undergo several CI/CD improvements and testing in the dev envir
 
 This project will undergo several enhancements to include
 
-- New styling with TailwindUI
+- ~~New styling with TailwindUI~~
 - Added UI/UX for Admin/Users
 - Added format placeholders to create a ticket form
 - Adjusted layout

@@ -12,13 +12,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className='flex-col space-y-3'>
+      <div className='flex-col space-y-3 '>
         <Link to='/new-ticket' className='btn btn-secondary block '>
           <div className='flex justify-center items-center pt-3'>
             <FaQuestionCircle className='text-3xl mr-3' /> Create New Ticket
           </div>
         </Link>
-        <Link to='/tickets' className='btn btn-secondary block'>
+        <Link to='/tickets' className='btn btn-secondary block '>
           <div className='flex justify-center items-center pt-3'>
             <FaTicketAlt className='text-3xl mr-3' /> View My Ticket
           </div>
