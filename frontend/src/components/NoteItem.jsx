@@ -5,18 +5,16 @@ const NoteItem = ({ note }) => {
 
   return (
     <div
-      className='note'
-      style={{
-        backgroundColor: note.isStaff ? 'rgba(0,0,0,0.7)' : '#fff',
-        color: note.isStaff ? '#fff' : '#000'
-      }}>
-      <h4>
+      className={`${note.isStaff? 'bg-secondary text-neutral':'bg-neutral'}`}
+    >
+      <h4 className='text-left text-lg md:text-2xl'>
         Note from {note.isStaff ? <span>Staff</span> : <span>{user.name}</span>}
       </h4>
       <p>{note.text}</p>
-      <div className='note-date'>
+      <div className='text-xs'>
         {new Date(note.createdAt).toLocaleString('en-US')}
       </div>
+      <hr></hr>
     </div>
   );
 };

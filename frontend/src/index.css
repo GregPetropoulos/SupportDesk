@@ -6,17 +6,17 @@
 @tailwind utilities;
 
 @layer components {
-  .status {
+  /* .status {
     @apply bg-secondary w-24 pt-5 pb-5 justify-self-center rounded-xl text-base-100 text-center;
-  }
+  } */
   .status-new {
-    @apply bg-accent rounded-xl;
+    @apply bg-success w-20 pb-1 rounded-xl justify-self-center text-base-100 text-center;
   }
   .status-open {
-    @apply bg-secondary-content rounded-xl;
+    @apply  bg-accent w-20 pb-1 rounded-xl justify-self-center text-base-100 text-center;
   }
   .status-closed{
-    @apply bg-error rounded-xl
+    @apply  bg-error w-20 pb-1 rounded-xl justify-self-center text-base-100 text-center; 
   }
 }
 

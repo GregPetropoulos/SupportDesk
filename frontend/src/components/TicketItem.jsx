@@ -14,7 +14,7 @@ const TicketItem = ({ ticket }) => {
       <div className='flex m-3'>
         <Link
           to={`/ticket/${ticket._id}`}
-          className='btn btn-accent btn-xs text-sm sm:text-md sm:w-1/4'>
+          className='btn btn-accent btn-xs text-sm sm:w-1/4'>
           View
         </Link>
       </div>

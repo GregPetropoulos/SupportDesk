@@ -102,7 +102,14 @@ const Ticket = () => {
       <div className=' card shadow-xl bg-neutral text-neutral-content sm:w-1/2 md:w-1/3 '>
         <div className='flex card-body md:text-left'>
           <h2 className='w-full justify-center card-title sm:justify-end '>
-            <span className={`  p-px status status-${ticket.status} sm:status`}>
+            <span
+              className={` ${
+                ticket.status === 'closed'
+                  ? 'status-closed'
+                  : ticket.status === 'open'
+                  ? 'status-open'
+                  : 'status-new'
+              }`}>
               {ticket.status}
             </span>
           </h2>

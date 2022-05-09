@@ -33,13 +33,15 @@ const Tickets = () => {
 
   return (
     <>
-      <header className='flex w-screen'>
+      <header className='flex w-screen sm:w-full'>
         <BackButton url='/' />
       </header>
-      <h1 className='w-screen text-2xl font-bold text-center'>Tickets</h1>
-      <div className='w-screen bg-base-150 sm:text-lg '>
-        <div className='grid grid-cols-3 justify-around items-center bg-secondary rounded text-center text-sm font-bold my-2 w-screen  sm:text-lg'>
-          <div className=''>Date</div>
+      <h1 className='w-screen text-2xl font-bold text-center sm:w-full sm:text-3xl md:text-4xl'>
+        Tickets
+      </h1>
+      <div className='w-screen bg-base-150 sm:text-md sm:w-full md:text-md'>
+        <div className='grid grid-cols-3 justify-around items-center bg-secondary rounded text-center text-sm font-bold my-2 w-screen  sm:text-2xl sm:w-full md:text-3xl'>
+          <div className='md:text-left md:pl-14'>Date</div>
           <div>Product</div>
           <div>Status</div>
           <div></div>
@@ -53,5 +55,3 @@ const Tickets = () => {
 };
 
 export default Tickets;
-// * WORK ON THE MD BREAKPOINT FOR THE HEADER
-// * WORK ON THE TICKETEM NEXT
