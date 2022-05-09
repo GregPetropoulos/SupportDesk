@@ -106,27 +106,54 @@ Version Control
 Support Ticket Services launched on Heroku on 4-29-2022
 
 ## ILLUSTRATIONS
+
+### Original Before
+
+Home page
+![ogHome](./frontend/src/assets/ogHome.png)
+
+Login Page
+![ogLogin](./frontend/src/assets/ogLogin.png)
+Register Page
+![ogRegister](./frontend/src/assets/ogRegister.png)
+New Ticket Page
+![ogNewTicket](./frontend/src/assets/ogNewTicket.png)
+View All Of Users Tickets Page
+![ogViewTickets](./frontend/src/assets/ogViewTickets.png)
+View One Ticket Page
+![ogTicket](./frontend/src/assets/ogTicket.png)
+Add A Note
+![ogNote](./frontend/src/assets/ogNote.png)
+
+### AFTER (enhanced)
+
 JSON Web Token
+
 - Once the token is hashed and salted I verified it on [JSON Web Token](https://jwt.io/)
-![JWT](./frontend/src/assets/jwt.png)
+  ![JWT](./frontend/src/assets/jwt.png)
 - Next to confirm the correct user `id` was encrypted in the token, a cross check in the [MongoDB](https://www.mongodb.com/) `user` collection matched
-![User](./frontend/src/assets/db.png)
+  ![User](./frontend/src/assets/db.png)
 
 ## SCOPE OF FUNCTIONALITIES
 
 ## Features
+
 - Authentication
--  ...
+- ...
+
 ### Authentication
 
 - Registration
 - Login
 - JSON Web Token
+
 ### A users functions include:
+
 - Create a ticket
 - View a ticket
 - Create a note
 - View a note
+
 ### An admin user will have future enhancements implemented see [Roadmap](#roadmap)
 
 ## EXAMPLE OF USE
