@@ -18,7 +18,7 @@ const initialState = {
 // Inside the async function pass the ticketData from the form and thunkAPI
 
 export const createTicket = createAsyncThunk(
-  '/tickets/create',
+  'tickets/create',
   async (ticketData, thunkAPI) => {
     try {
       // by using the thunkAPI we can access a piece of state from anywhere. In this case we can get the user object to get the token from the authstate with the method  called getState, We are doing this to pass it to the service which will make api call to tickets--huge advantage here vs vanilla Redux
@@ -45,7 +45,7 @@ export const createTicket = createAsyncThunk(
 // Inside the async function pass the user from the form and thunkAPI
 
 export const getTickets = createAsyncThunk(
-  '/tickets/getAll',
+  'tickets/getAll',
   async (_, thunkAPI) => {
     //used underscore to be placeholder for the first arg
 
@@ -74,7 +74,7 @@ export const getTickets = createAsyncThunk(
 // Inside the async function pass the user from the form and thunkAPI
 
 export const getTicket = createAsyncThunk(
-  '/tickets/get',
+  'tickets/get',
   async (ticketId, thunkAPI) => {
 
 
@@ -103,7 +103,7 @@ export const getTicket = createAsyncThunk(
 // Inside the async function pass the user from the form and thunkAPI
 
 export const closeTicket = createAsyncThunk(
-  '/tickets/close',
+  'tickets/close',
   async (ticketId, thunkAPI) => {
     try {
       // by using the thunkAPI we can access a piece of state from anywhere. In this case we can get the user object to get the token from the authstate with the method  called getState, We are doing this to pass it to the service which will make api call to tickets--huge advantage here vs vanilla Redux
