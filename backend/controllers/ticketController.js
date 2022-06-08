@@ -24,7 +24,7 @@ const getTickets = asyncHandler(async (req, res) => {
 // * @desc Create a new ticket
 // * @route POST /api/tickets
 // * access Private
-const createTickets = asyncHandler(async (req, res) => {
+const createTicket = asyncHandler(async (req, res) => {
   const { product, description } = req.body;
 
   if (!product || !description) {
@@ -141,7 +141,7 @@ const updateTicket = asyncHandler(async (req, res) => {
 module.exports = {
   getTickets,
   getTicket,
-  createTickets,
+  createTicket,
   updateTicket,
   deleteTicket,
 };

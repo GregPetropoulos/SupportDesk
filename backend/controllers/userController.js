@@ -61,7 +61,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 
   // console.log(req.body);
-  res.send('Register Route');
+  // res.send('Register Route');
 });
 // *-------------------------------------------------------
 
