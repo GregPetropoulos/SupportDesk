@@ -47,7 +47,7 @@ export const register = createAsyncThunk(
 // *LOGIN A USER
 // same as register notes
 export const login = createAsyncThunk('/auth/login', async (user, thunkAPI) => {
-  console.log(user);
+  // console.log(user);
   try {
     return await authService.login(user);
   } catch (error) {
