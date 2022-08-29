@@ -4,7 +4,7 @@ import axios from 'axios';
 //* This is the same thing we did in the Postman endpoint for registering a user
 //added  "proxy":"http://localhost:5000" to package.json because this was trying to access "http://localhost:3000/api/users on frontend
 
-const API_URL = '/api/users/'
+const API_URL = '/api/users/';
 
 // *REGISTER A USER TO BACKEND
 const register = async (userData) => {
@@ -18,7 +18,7 @@ const register = async (userData) => {
 };
 
 // * LOGIN USER
-const login = async(userData) => {
+const login = async (userData) => {
   const response = await axios.post(API_URL + 'login', userData);
 
   if (response.data) {
@@ -26,14 +26,14 @@ const login = async(userData) => {
     localStorage.setItem('user', JSON.stringify(response.data));
   }
   return response.data; //* This returns the userData and jwt
-}
+};
 
 // *LOGOUT USER
-const logout =() => localStorage.removeItem('user')
+const logout = () => localStorage.removeItem('user');
 
 const authService = {
   register,
   logout,
-  login,
+  login
 };
 export default authService;

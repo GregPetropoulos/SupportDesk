@@ -64,6 +64,7 @@ const Login = () => {
     // Dispatch the login action from authSlice.js and pass in the userData object
     dispatch(login(userData));
   };
+
   if (isLoading) {
     return <Spinner />;
   }

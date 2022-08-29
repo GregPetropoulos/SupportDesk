@@ -1,18 +1,22 @@
-import React from 'react';
-
-import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
+import { toast } from 'react-toastify';
+import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa';
+import Spinner from './Spinner';
 
 // RXTK
 import { useSelector, useDispatch } from 'react-redux';
-import { logout, reset } from '../features/auth/authSlice';
+import { login, logout, reset } from '../features/auth/authSlice';
 
 const Header = () => {
   // RXTK
   const navigate = useNavigate();
   const dispatch = useDispatch();
   // Grabs user from the state
-  const { user } = useSelector((state) => state.auth);
+  const { user, isSuccess, isError, isLoading, message } = useSelector(
+    (state) => state.auth
+  );
 
   const onLogout = () => {
     // RXTK
@@ -21,6 +25,28 @@ const Header = () => {
     navigate('/');
   };
 
+  // DEMO LOGIN
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    // Redirect if successful user logged in
+    if (isSuccess) {
+      navigate('/');
+      toast.success('Demo is logged in');
+    }
+  }, [isError, isSuccess, message, dispatch]);
+
+  const demoLogin = () => {
+    const userData = {
+      email: 'demo@yahoo.com',
+      password: 'password'
+    };
+    dispatch(login(userData));
+  };
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <header className='flex items-center justify-between border-b-2 border-300  pb-2'>
       <nav className='navbar bg-base-100 '>
@@ -55,6 +81,12 @@ const Header = () => {
               ) : (
                 <>
                   <li className='btn btn-outline btn-primary btn-sm p-5'>
+                    <Link to='#' onClick={demoLogin}>
+                      <FaSignInAlt />
+                      Demo
+                    </Link>
+                  </li>
+                  <li className='btn btn-outline btn-primary btn-sm p-5'>
                     <Link to='/login'>
                       <FaSignInAlt />
                       Login
@@ -88,6 +120,12 @@ const Header = () => {
               </li>
             ) : (
               <>
+                <li className='btn btn-outline btn-primary btn-md rounded mr-2 p-px'>
+                  <Link to='#' onClick={demoLogin}>
+                    <FaSignInAlt />
+                    Demo
+                  </Link>
+                </li>
                 <li className='btn btn-outline btn-primary btn-md rounded mr-2 p-px '>
                   <Link to='/login'>
                     <FaSignInAlt />
