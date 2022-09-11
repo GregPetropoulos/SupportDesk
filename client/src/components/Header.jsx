@@ -33,7 +33,7 @@ const Header = () => {
     // Redirect if successful user logged in
     if (isSuccess) {
       navigate('/');
-      toast.success('Demo is logged in');
+      toast.success('Logged in');
     }
   }, [isError, isSuccess, message, dispatch]);
 
