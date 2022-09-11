@@ -1,6 +1,6 @@
 # Support Ticket Services
 
-### [Deployed](https://support-desk-services.herokuapp.com/)
+### [Deployed](https://supportdesk-8110.onrender.com/)
 
 | Enhanced/Add On | [Original Demo](https://youtu.be/OVEQdZ0eIcg) |                             [Enhanced Demo]() ...coming soon                              |
 | --------------- | :-------------------------------------------: | :---------------------------------------------------------------------------------------: |
@@ -82,7 +82,7 @@ Supporting documentation can be found in the [sources](#sources)
 - Redux ToolKit: Robust State Management
 - React Dev Tools
 
-![MERN](./frontend/src/assets/MERN-stack-1.webp)
+![MERN](./client/src/assets/MERN-stack-1.webp)
 
 ### Backend
 
@@ -101,7 +101,7 @@ Version Control
 
 ## LAUNCH
 
-[Deployed](https://support-desk-services.herokuapp.com/)
+[Deployed](https://supportdesk-8110.onrender.com/)
 
 Support Ticket Services launched on Heroku on 4-29-2022
 
@@ -110,20 +110,20 @@ Support Ticket Services launched on Heroku on 4-29-2022
 ### Original Before
 
 Home page
-![ogHome](./frontend/src/assets/ogHome.png)
+![ogHome](./client/src/assets/ogHome.png)
 
 Login Page
-![ogLogin](./frontend/src/assets/ogLogin.png)
+![ogLogin](./client/src/assets/ogLogin.png)
 Register Page
-![ogRegister](./frontend/src/assets/ogRegister.png)
+![ogRegister](./client/src/assets/ogRegister.png)
 New Ticket Page
-![ogNewTicket](./frontend/src/assets/ogNewTicket.png)
+![ogNewTicket](./client/src/assets/ogNewTicket.png)
 View All Of Users Tickets Page
-![ogViewTickets](./frontend/src/assets/ogViewTickets.png)
+![ogViewTickets](./client/src/assets/ogViewTickets.png)
 View One Ticket Page
-![ogTicket](./frontend/src/assets/ogTicket.png)
+![ogTicket](./client/src/assets/ogTicket.png)
 Add A Note
-![ogNote](./frontend/src/assets/ogNote.png)
+![ogNote](./client/src/assets/ogNote.png)
 
 ### AFTER (enhanced)
 
@@ -160,7 +160,7 @@ JSON Web Token
 
 ## PROJECT STATUS
 
-Currently live and [Deployed](https://support-desk-services.herokuapp.com/) to Heroku, fully functional.
+Currently live and [Deployed](https://supportdesk-8110.onrender.com/) to Heroku, fully functional.
 
 The project will undergo several CI/CD improvements and testing in the dev environment, and afterwards pushed to prod via heroku main branch
 
