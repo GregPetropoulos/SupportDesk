@@ -12,5 +12,7 @@ export const store = configureStore({
     auth: authReducer,
     tickets: ticketReducer,
     notes: noteReducer
-  }
+  },
+  //Deactivate devtools for render deployment
+  devTools:false,
 });
